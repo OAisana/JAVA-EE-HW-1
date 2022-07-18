@@ -20,9 +20,42 @@ public class HomeServlet extends HttpServlet {
         out.print("<title>FIRST JAVA EE APP</title>");
         out.print("</head>");
         out.print("<body>");
-        for (int i = 0; i < 10; i++) {
-            out.print("<h1 style = 'color:darkblue;'>HELLO BITLAB</h1>");
-        }
+        out.print("<table>");
+        out.print("<thead>");
+        out.print("<tr>");
+        out.print("<th>NAME</th>");
+        out.print("<th>SURNAME</th>");
+        out.print("<th>DEPARTMENT</th>");
+        out.print("<th>SALARY</th>");
+        out.print("</tr>");
+        out.print("</thead>");
+        out.print("<tbody>");
+        out.print("<tr>");
+        out.print("<td>A</td>");
+        out.print("<td>A</td>");
+        out.print("<td>1</td>");
+        out.print("<td>1</td>");
+        out.print("</tr>");
+        out.print("<tr>");
+        out.print("<td>B</td>");
+        out.print("<td>B</td>");
+        out.print("<td>2</td>");
+        out.print("<td>2</td>");
+        out.print("</tr>");
+        out.print("<tr>");
+        out.print("<td>C</td>");
+        out.print("<td>C</td>");
+        out.print("<td>3</td>");
+        out.print("<td>3</td>");
+        out.print("</tr>");
+        out.print("<tr>");
+        out.print("<td>D</td>");
+        out.print("<td>D</td>");
+        out.print("<td>4</td>");
+        out.print("<td>4</td>");
+        out.print("</tr>");
+        out.print("</tbody>");
+        out.print("</table>");
         out.print("</body>");
         out.print("</html>");
     }
