@@ -9,15 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 
-@WebServlet(value = "/indexpage")
-public class HomeServlet extends HttpServlet {
+@WebServlet(value = "/details")
+public class DetailsServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        ArrayList<Computer> computers = DBManager.getComputers();
-        request.setAttribute("kompukterler", computers);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        Computer computer = DBManager.getComputer(id);
+        request.setAttribute("computer", computer);
+        request.getRequestDispatcher("/details.jsp").forward(request, response);
+
     }
 }
